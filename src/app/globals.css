@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html, body, :root {
+  height: 100%;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +28,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+
+
+@layer components {
+  .input {
+    @apply py-2 duration-200  transition px-4 rounded-lg border border-gray-300 bg-white text-gray-900;
+  }
+
+  .label {
+    @apply text-lg font-medium text-gray-900;
+  }
 }
